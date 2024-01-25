@@ -1,4 +1,5 @@
 import telebot
+import time
 
 bot = telebot.TeleBot('6958783112:AAEvgeKxpnClQFT1sT-kL7M-4R8-j0Z-1zI')
 
@@ -18,4 +19,9 @@ def webAppKeyboard():
 
    return keyboard
 
-bot.polling(none_stop=True, interval=0)
+if __name__ == 'main':
+    while True:
+        try:
+            bot.pollign(none_stop=True)
+        except:
+            time.sleep(10)
