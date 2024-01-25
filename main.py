@@ -19,9 +19,4 @@ def webAppKeyboard():
 
    return keyboard
 
-if __name__ == 'main':
-    while True:
-        try:
-            bot.pollign(none_stop=True)
-        except:
-            time.sleep(10)
+bot.polling(none_stop=True, interval=0)
